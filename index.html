@@ -1,33 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | NFT preview card component</title>
+
+  <!-- Imports Outfit font family-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    html,
+    body {
+      background-color: hsl(217, 54%, 11%);
+      color: hsl(215, 51%, 70%);
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      height: 100%;
+    }
+
+    h1 {
+      font-size: 19px;
+    }
+
+    .nft-card>p {
+      font-size: 18px;
+    }
+
+    .nft-card {
+      font-family: 'Outfit', sans-serif;
+      background-color: hsl(216, 50%, 16%);
+      border-radius: 1em;
+      width: 350px;
+      padding: 20px;
+    }
+
+    .nft-card-image img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .nft-card a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .icon-text {
+      display: flex;
+      gap: .5em;
+      align-items: center;
+    }
+
+    .pfp {
+      height: 2em;
+      border: 1.5px solid white;
+      border-radius: 50%;
+    }
   </style>
 </head>
+
 <body>
 
-  Equilibrium #3429
+  <div class="nft-card">
 
-  Our Equilibrium collection promotes balance and calm.
+    <div class="nft-card-image">
+      <img src="images/image-equilibrium.jpg" alt="Equilibrium picture">
+    </div>
 
-  0.041 ETH
-  3 days left
-  
-  Creation of Jules Wyvern
+    <h1><a href="#"> Equilibrium #3429</a></h1>
+
+    <p>Our Equilibrium collection promotes balance and calm.</p>
+
+    <div style="display:flex; justify-content: space-between;">
+      <div class="icon-text" style="color: hsl(178, 100%, 50%); font-weight: 600;">
+        <img src="images/icon-ethereum.svg" alt="ethereum icon">
+        <p>0.041 ETH</p>
+      </div>
+      <div class="icon-text">
+        <img src="images/icon-clock.svg" alt="Clock icon">
+        <p>3 days left</p>
+      </div>
+    </div>
+
+
+    <div style="display: flex; gap: 1em; align-items: center; border-top: 1px solid hsl(215, 32%, 27%); padding-top: 10px;">
+      <img class="pfp" src="images/image-avatar.png" alt="Jules Wyvern pfp">
+      <p>Creation of <a href="#">Jules Wyvern</a></p>
+    </div>
+
+  </div>
 
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
 </html>
