@@ -38,20 +38,41 @@
       height: 100%;
     }
 
-    h1 {
-      font-size: 19px;
-    }
 
     .nft-card>p {
       font-size: 18px;
+      margin-bottom: 0px;
     }
 
     .nft-card {
       font-family: 'Outfit', sans-serif;
       background-color: hsl(216, 50%, 16%);
       border-radius: 1em;
-      width: 350px;
+      width: 300px;
       padding: 20px;
+    }
+
+    .nft-card-image {
+      position: relative;
+      height: 300px;
+      width: auto;
+    }
+
+    h1 {
+      font-size: 19px;
+      margin-top: 1em;
+    }
+
+    .nft-card a:link,
+    .nft-card a:visited,
+    .nft-card-image:link,
+    .nft-card-image:visited {
+      color: white;
+      text-decoration: none;
+    }
+
+    .nft-card a:hover {
+      color: hsl(178, 100%, 50%);
     }
 
     .nft-card-image img {
@@ -59,9 +80,32 @@
       border-radius: 10px;
     }
 
-    .nft-card a {
-      color: white;
-      text-decoration: none;
+    .overlay {
+      position: absolute;
+      height: 300px;
+      width: 300px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: hsl(178, 100%, 50%, 0%);
+      background-image: url(images/icon-view.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      opacity: 0;
+    }
+
+    .overlay:hover {
+
+      background-color: hsl(178, 100%, 50%, 40%) ;
+      opacity: 1;
+
+    }
+
+    .eye-image {
+      top: 50%;
+      left: 50%;
     }
 
     .icon-text {
@@ -75,6 +119,15 @@
       border: 1.5px solid white;
       border-radius: 50%;
     }
+
+    .creator-section {
+      display: flex;
+      gap: 1em;
+      align-items: center;
+      border-top: 1px solid hsl(215, 32%, 27%);
+      padding-top: 5px;
+    }
+
   </style>
 </head>
 
@@ -84,6 +137,7 @@
 
     <div class="nft-card-image">
       <img src="images/image-equilibrium.jpg" alt="Equilibrium picture">
+      <a href="#" class="overlay"></a>
     </div>
 
     <h1><a href="#"> Equilibrium #3429</a></h1>
@@ -91,7 +145,7 @@
     <p>Our Equilibrium collection promotes balance and calm.</p>
 
     <div style="display:flex; justify-content: space-between;">
-      <div class="icon-text" style="color: hsl(178, 100%, 50%); font-weight: 600;">
+      <div class="icon-text" style="color: hsl(178, 100%, 50%); font-weight: 400;">
         <img src="images/icon-ethereum.svg" alt="ethereum icon">
         <p>0.041 ETH</p>
       </div>
@@ -102,7 +156,7 @@
     </div>
 
 
-    <div style="display: flex; gap: 1em; align-items: center; border-top: 1px solid hsl(215, 32%, 27%); padding-top: 10px;">
+    <div class="creator-section">
       <img class="pfp" src="images/image-avatar.png" alt="Jules Wyvern pfp">
       <p>Creation of <a href="#">Jules Wyvern</a></p>
     </div>
