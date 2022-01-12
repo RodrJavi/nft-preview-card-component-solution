@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.png)
+![](images/screenshot.png)
 ### Links
 
 - Solution URL: [Github repository](https://github.com/RodrJavi/nft-preview-card-component-solution)
